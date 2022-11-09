@@ -26,19 +26,19 @@ $tbody = "";
 // $row = mysqli_fetch_assoc($result);
 // var_dump_pretty($row);#
 if (mysqli_num_rows($result) > 0) {
-    while ($row =  mysqli_fetch_assoc($result)) {
-        $tbody .= "
-<tr>
-            <td><img class='img-thumbnail' src='images/" . $row['image'] . "'</td>
-           <td>" . $row['name'] . "</td>
-           <td>" . $row['price'] . "</td>
-           
-           <td class='text-center'><a href='update.php?id=" . $row['id'] . "'><button class='btn btn-primary btn-sm' type='button'>Edit</button></a>
-           <a href='delete.php?id=" . $row['id'] . "'><button class='btn btn-danger btn-sm' type='button'>Delete</button></a>
-           <a href='show_detail.php?id=" . $row['id'] . "'><button class='btn btn-info btn-sm' type='button'>show details</button></a></td>
-            </tr>
-";
-    }
+        while ($row =  mysqli_fetch_assoc($result)) {
+            $tbody .= "
+    <tr>
+                <td><img class='img-thumbnail' src='images/" . $row['image'] . "'</td>
+            <td>" . $row['name'] . "</td>
+            <td>" . $row['price'] . "</td>
+            
+            <td class='text-center'><a href='update.php?id=" . $row['id'] . "'><button class='btn btn-primary btn-sm' type='button'>Edit</button></a>
+            <a href='delete.php?id=" . $row['id'] . "'><button class='btn btn-danger btn-sm' type='button'>Delete</button></a>
+            <a href='show_detail.php?id=" . $row['id'] . "'><button class='btn btn-info btn-sm' type='button'>show details</button></a></td>
+                </tr>
+    ";
+        }
 } else {
     $tbody = "<tr><td colspan='4' class='text-center'>No data available</td></tr>";
 }
