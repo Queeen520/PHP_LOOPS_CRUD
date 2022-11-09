@@ -31,15 +31,18 @@
 
 <div class="item">
     <?php 
+
     $a = "Isabella";
 
     for ($i=0; $i < 50; $i++) {
         echo "$a <br>";
     }
+
     ?>
 </div>
 <div class="item">
 <?php 
+
     $a = "Isabella";
     $i = 0;
 
@@ -47,14 +50,20 @@
         $i ++;
         echo "$a <br>";
     }
+    
     ?>
 </div>
 <div class="item">
 <?php 
+
     $a = "Isabella";
     $i = 0;
-
-
+    do {
+        $i++;
+        echo "$a <br>";
+    }
+    while ($i < 50);
+    
     ?>
 </div>
 
